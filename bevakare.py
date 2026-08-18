@@ -1,8 +1,8 @@
 import requests
 
 urls = {
-    "Laptop Outlet": "https://www.elgiganten.se/outlet/outlet-datorer-kontor/outlet-laptop/page-1",
-    "Gaming Laptop Outlet": "https://www.elgiganten.se/outlet/outlet-gaming/outlet-gaming-laptop"
+    "RTX 5070": "https://www.elgiganten.se/brand/nvidia/nvidia-geforce-50-series/nvidia-geforce-rtx-5070-series/page-1",
+    "RTX 5060": "https://www.elgiganten.se/brand/nvidia/nvidia-geforce-50-series/nvidia-geforce-rtx-5060-serien/page-1"
 }
 
 headers = {
@@ -25,6 +25,11 @@ for name, url in urls.items():
 
         print("Statuskod:", response.status_code)
         print("Antal tecken:", len(response.text))
+
+        if response.status_code == 200:
+            print("Sidan kunde hämtas!")
+        else:
+            print("Sidan kunde inte hämtas.")
 
     except Exception as e:
         print("Fel:", e)
