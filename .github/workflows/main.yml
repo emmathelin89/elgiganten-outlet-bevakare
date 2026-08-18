@@ -16,5 +16,8 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Installera requests
+        run: pip install requests
+
       - name: Kör bevakaren
         run: python bevakare.py
