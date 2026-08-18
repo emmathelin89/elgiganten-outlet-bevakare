@@ -1,0 +1,1 @@
+print("Elgiganten-bevakaren fungerar!")
